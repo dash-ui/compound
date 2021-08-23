@@ -4,6 +4,8 @@ import {styles} from '@dash-ui/styles'
 describe('compound', () => {
   afterEach(() => {
     document.getElementsByTagName('html')[0].innerHTML = ''
+    styles.dash.sheet.flush()
+    styles.dash.cache.clear()
   })
 
   it('should create a compound style', () => {
