@@ -1,5 +1,5 @@
-import compound from './index'
 import {styles} from '@dash-ui/styles'
+import compound from './index'
 
 describe('compound', () => {
   afterEach(() => {
