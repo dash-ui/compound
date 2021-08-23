@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`compound should create a compound style 1`] = `
+<style
+  data-dash="ui"
+>
+  .ui-1ke32n{background-color:white;color:red;font-size:1rem;}
+</style>
+`;
+
+exports[`compound should create a compound style 2`] = `
+<style
+  data-dash="ui"
+>
+  .ui-1ke32n{background-color:white;color:red;font-size:1rem;}
+</style>
+`;

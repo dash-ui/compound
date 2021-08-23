@@ -8,6 +8,8 @@
   "license": "MIT",
   "description": "A utility for creating compound styles with dash-ui",
   "keywords": [
+    "dash-ui",
+    "dash",
     "compound"
   ],
   "main": "dist/main/index.js",
@@ -85,6 +87,7 @@
     "*.config.js"
   ],
   "jest": {
+    "testEnvironment": "jsdom",
     "moduleDirectories": [
       "node_modules",
       "src",
@@ -112,6 +115,8 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
+    "@dash-ui/responsive": "^0.2.3",
+    "@dash-ui/styles": "^0.8.6",
     "@types/jest": "latest",
     "babel-jest": "latest",
     "cli-confirm": "latest",
@@ -127,5 +132,8 @@
     "typescript": "latest"
   },
   "dependencies": {},
-  "peerDependencies": {}
+  "peerDependencies": {
+    "@dash-ui/responsive": ">=0.2.3",
+    "@dash-ui/styles": ">=0.8.6"
+  }
 }
