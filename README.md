@@ -1,0 +1,52 @@
+<hr/>
+
+# @dash-ui/compound
+
+> A utility for creating compound styles with dash-ui
+
+```sh
+npm i @dash-ui/compound
+```
+
+<p>
+  <a href="https://bundlephobia.com/result?p=@dash-ui/compound">
+    <img alt="Bundlephobia" src="https://img.shields.io/bundlephobia/minzip/@dash-ui/compound?style=for-the-badge&labelColor=24292e">
+  </a>
+  <a aria-label="Types" href="https://www.npmjs.com/package/@dash-ui/compound">
+    <img alt="Types" src="https://img.shields.io/npm/types/@dash-ui/compound?style=for-the-badge&labelColor=24292e">
+  </a>
+  <a aria-label="Code coverage report" href="https://codecov.io/gh/dash-ui/compound">
+    <img alt="Code coverage" src="https://img.shields.io/codecov/c/gh/dash-ui/compound?style=for-the-badge&labelColor=24292e">
+  </a>
+  <a aria-label="Build status" href="https://travis-ci.com/dash-ui/compound">
+    <img alt="Build status" src="https://img.shields.io/travis/com/dash-ui/compound?style=for-the-badge&labelColor=24292e">
+  </a>
+  <a aria-label="NPM version" href="https://www.npmjs.com/package/@dash-ui/compound">
+    <img alt="NPM Version" src="https://img.shields.io/npm/v/@dash-ui/compound?style=for-the-badge&labelColor=24292e">
+  </a>
+  <a aria-label="License" href="https://jaredlunde.mit-license.org/">
+    <img alt="MIT License" src="https://img.shields.io/npm/l/@dash-ui/compound?style=for-the-badge&labelColor=24292e">
+  </a>
+</p>
+
+---
+
+## Quick start
+
+```js
+import _ from '@dash-ui/compound'
+```
+
+## API
+
+### someFunction()
+
+#### Arguments
+
+| Name | Type | Default | Required? | Description |
+| ---- | ---- | ------- | --------- | ----------- |
+|      |      |         |           |             |
+
+## LICENSE
+
+MIT
