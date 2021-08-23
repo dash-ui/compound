@@ -6,10 +6,6 @@
   <pre>npm i @dash-ui/compound</pre>
   <br/>
 
-```sh
-npm i @dash-ui/compound
-```
-
 <p>
   <a href="https://bundlephobia.com/result?p=@dash-ui/compound">
     <img alt="Bundlephobia" src="https://img.shields.io/bundlephobia/minzip/@dash-ui/compound?style=for-the-badge&labelColor=24292e">
