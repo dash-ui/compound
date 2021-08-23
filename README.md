@@ -36,18 +36,18 @@ npm i @dash-ui/compound
 ## Quick start
 
 ```js
-import _ from '@dash-ui/compound'
+import compound from '@dash-ui/compound'
 ```
 
 ## API
 
-### someFunction()
+### compound(styles)
 
 #### Arguments
 
-| Name | Type | Default | Required? | Description |
-| ---- | ---- | ------- | --------- | ----------- |
-|      |      |         |           |             |
+| Name   | Type     | Default | Required? | Description                                                      |
+| ------ | -------- | ------- | --------- | ---------------------------------------------------------------- |
+| styles | `Styles` |         | Yes       | Creates a compound styles utility on top of this styles instance |
 
 ## LICENSE
 
