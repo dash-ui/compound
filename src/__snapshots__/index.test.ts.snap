@@ -1,17 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`compound should create a compound style 1`] = `
-<style
-  data-dash="ui"
->
-  .ui-1ke32n{background-color:white;color:red;font-size:1rem;}
-</style>
-`;
+exports[`compound should create a compound style 1`] = `".ui-1ke32n{background-color:white;color:red;font-size:1rem;}"`;
 
-exports[`compound should create a compound style 2`] = `
-<style
-  data-dash="ui"
->
-  .ui-1ke32n{background-color:white;color:red;font-size:1rem;}
-</style>
-`;
+exports[`compound should create a compound style 2`] = `".ui-1ke32n{background-color:white;color:red;font-size:1rem;}"`;
+
+exports[`compound should create an atomic compound style 1`] = `".ui-12krds1{background-color:white;}"`;
+
+exports[`compound should create an atomic compound style 2`] = `".ui-9rfate{color:red;}"`;
+
+exports[`compound should create an atomic compound style 3`] = `".ui-1q19p6e{font-size:1rem;}"`;
+
+exports[`compound should create an atomic compound style 4`] = `".ui-12krds1{background-color:white;}"`;
+
+exports[`compound should create an atomic compound style 5`] = `".ui-9rfate{color:red;}"`;
+
+exports[`compound should create an atomic compound style 6`] = `".ui-1q19p6e{font-size:1rem;}"`;
+
+exports[`compound should create an atomic compound style ad hoc 1`] = `".ui-12krds1{background-color:white;}"`;
+
+exports[`compound should create an atomic compound style ad hoc 2`] = `".ui-9rfate{color:red;}"`;
+
+exports[`compound should create an atomic compound style ad hoc 3`] = `".ui-1q19p6e{font-size:1rem;}"`;
+
+exports[`compound should create an atomic compound style ad hoc 4`] = `".ui-12krds1{background-color:white;}"`;
+
+exports[`compound should create an atomic compound style ad hoc 5`] = `".ui-9rfate{color:red;}"`;
+
+exports[`compound should create an atomic compound style ad hoc 6`] = `".ui-1q19p6e{font-size:1rem;}"`;
