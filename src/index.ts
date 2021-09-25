@@ -5,21 +5,26 @@ import type {
   ResponsiveStyles,
 } from '@dash-ui/responsive'
 import type {
+  DashTokens,
   Style,
   Styles,
   StylesLazy,
   StylesOne,
-  DashTokens,
 } from '@dash-ui/styles'
 
 /**
  * A factory function that creates a compound styles utility
+ *
+ * @param styles
  */
 function compound<Tokens extends DashTokens, ThemeNames extends string>(
   styles: Styles<Tokens, ThemeNames> | ResponsiveStyles<Tokens, any, ThemeNames>
 ) {
   /**
    * A function for creating compound/multi-variant styles
+   *
+   * @param styleMap
+   * @param options
    */
   return function compoundStyles<
     Keys extends string,
