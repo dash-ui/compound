@@ -38,14 +38,12 @@ function compound<Tokens extends DashTokens, ThemeNames extends string>(
     const mapKeys: string[] = []
     mapKeys.push(...Object.keys(styleMap))
 
-    function atomicCss(
-      compoundMap: {[Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0]}
-    ): string[] {
+    function atomicCss(compoundMap: {
+      [Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0]
+    }): string[] {
       const key = JSON.stringify(compoundMap)
-
-      if (cache.has(key)) {
-        return cache.get(key) || []
-      }
+      const cached = cache.get(key)
+      if (cached) return cached
 
       const output: string[] =
         // @ts-expect-error
@@ -68,9 +66,9 @@ function compound<Tokens extends DashTokens, ThemeNames extends string>(
       return output
     }
 
-    function css(
-      compoundMap: {[Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0]}
-    ): string {
+    function css(compoundMap: {
+      [Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0]
+    }): string {
       const css = atomicCss(compoundMap)
       let output = ''
       let i = 0
