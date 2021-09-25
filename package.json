@@ -43,7 +43,6 @@
     "format": "prettier --write \"{,!(node_modules|dist|coverage)/**/}*.{ts,js,md,yml,json}\"",
     "lint": "eslint . --ext .ts",
     "test": "jest",
-    "test:report": "cross-env JEST_JUNIT_OUTPUT_DIR=.jest JEST_JUNIT_ADD_FILE_ATTRIBUTE='true' jest --reporters=default --reporters=jest-junit",
     "validate": "lundle check-types && npm run lint && jest --coverage"
   },
   "husky": {
@@ -117,11 +116,6 @@
       "__DEV__": true
     }
   },
-  "jest-junit": {
-    "output": "./junit.xml",
-    "ancestorSeparator": " › ",
-    "suiteNameTemplate": "`{title}` — _{filepath}_"
-  },
   "prettier": {
     "semi": false,
     "singleQuote": true,
@@ -143,7 +137,6 @@
     "eslint-config-lunde": "latest",
     "husky": "4",
     "jest": "latest",
-    "jest-junit": "^12.3.0",
     "lint-staged": "latest",
     "lundle": "latest",
     "prettier": "latest",
