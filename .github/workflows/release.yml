@@ -44,12 +44,13 @@ jobs:
         run: pnpm lint -- --quiet
       - name: 🧪 Test
         run: pnpm test -- --coverage --silent
-      - name: Publish tests to Codecov
-        if: always()
-        uses: codecov/codecov-action@v2
-        with:
-          files: coverage/clover.xml
-          fail_ci_if_error: false
+      # - name: Publish tests to Codecov
+      #   if: always()
+      #   uses: codecov/codecov-action@v2
+      #   with:
+      #     files: coverage/clover.xml
+      #     verbose: false
+      #     fail_ci_if_error: false
 
   publish:
     name: 🚀 Publish
