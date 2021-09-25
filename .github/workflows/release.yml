@@ -42,54 +42,25 @@ jobs:
         run: pnpm check-types
       - name: 🧹 Lint
         run: pnpm lint -- --quiet
-      - name: Test
+      - name: 🧪 Test
         env:
           JEST_SUITE_NAME: 'Test'
           JEST_JUNIT_OUTPUT_NAME: junit.xml
           JEST_JUNIT_OUTPUT_DIR: .test-results
           JEST_JUNIT_ADD_FILE_ATTRIBUTE: 'true'
         run: pnpm test -- --coverage --silent --reporters=jest-junit
-      - name: Upload test results
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-results
-          path: .test-results/junit.xml
-      - name: Upload test coverage
-        uses: actions/upload-artifact@v2
-        with:
-          name: test-coverage
-          path: coverage
-
-  publish-tests:
-    name: 📤 Publish test results
-    runs-on: ubuntu-latest
-    needs: install-and-verify
-    if: always()
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
-      - name: Download test results
-        uses: actions/download-artifact@v2
-        with:
-          name: test-results
-          path: .jest
-      - name: Publish test results
+      - name: 📤 Publish test results
+        if: always()
         uses: dorny/test-reporter@v1
         with:
           name: 📥 Test results
           token: ${{ secrets.GITHUB_TOKEN }}
           reporter: jest-junit
-          path: .jest/junit.xml
+          path: .test-results/junit.xml
           list-suites: 'all'
           list-tests: 'all'
           max-annotations: '50'
           fail-on-error: 'true'
-      - name: Commit test results
-        if: ${{ github.event_name == 'push' }}
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          file_pattern: .jest/junit.xml
-          commit_message: 'chore: update test results'
 
   publish:
     name: 🚀 Publish
