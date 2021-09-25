@@ -5,7 +5,6 @@ specifiers:
   '@commitlint/config-conventional': latest
   '@dash-ui/responsive': ^0.2.3
   '@dash-ui/styles': ^0.8.6
-  '@split-tests/jest': ^0.0.7
   '@swc-node/core': ^1.6.0
   '@swc-node/jest': ^1.3.2
   '@types/jest': latest
@@ -29,7 +28,6 @@ devDependencies:
   '@commitlint/config-conventional': 13.1.0
   '@dash-ui/responsive': 0.2.3_@dash-ui+styles@0.8.6
   '@dash-ui/styles': 0.8.6
-  '@split-tests/jest': 0.0.7
   '@swc-node/core': 1.6.0
   '@swc-node/jest': 1.3.2
   '@types/jest': 27.0.2
@@ -2057,18 +2055,6 @@ packages:
     resolution: {integrity: sha512-iQADsW4LBMISqZ6Ci1dupJL9pprqwcVFTcOsEmQOEhW+KLCVn/Y4Jrvg2k19fIHCp+iFprriYPTdRcQR8NbUPg==}
     dependencies:
       '@sinonjs/commons': 1.8.3
-    dev: true
-
-  /@split-tests/core/0.0.7:
-    resolution: {integrity: sha512-rU8K7137K9IPlmA89FHLfQ9v1A9CJsdBOOCeuo7gK2G3XgfFB7tEXQ4PxilKVO8qWJIa5D1cSIQ1cuTOZbaJ/w==}
-    dependencies:
-      fast-xml-parser: 3.17.6
-    dev: true
-
-  /@split-tests/jest/0.0.7:
-    resolution: {integrity: sha512-mwxgXIVO6WfXj6ag2CwAPfqnbAKxW4M/dUz7SGIVjgMPQkqtb4ATIroA9axixfKk4oGnWdOdEpKmL5Htqcv/yw==}
-    dependencies:
-      '@split-tests/core': 0.0.7
     dev: true
 
   /@swc-node/core/1.6.0:
@@ -4314,11 +4300,6 @@ packages:
 
   /fast-levenshtein/2.0.6:
     resolution: {integrity: sha1-PYpcZog6FqMMqGQ+hR8Zuqd5eRc=}
-    dev: true
-
-  /fast-xml-parser/3.17.6:
-    resolution: {integrity: sha512-40WHI/5d2MOzf1sD2bSaTXlPn1lueJLAX6j1xH5dSAr6tNeut8B9ktEL6sjAK9yVON4uNj9//axOdBJUuruCzw==}
-    hasBin: true
     dev: true
 
   /fastq/1.13.0:
