@@ -16,8 +16,8 @@
   <a aria-label="Code coverage report" href="https://codecov.io/gh/dash-ui/compound">
     <img alt="Code coverage" src="https://img.shields.io/codecov/c/gh/dash-ui/compound?style=for-the-badge&labelColor=24292e">
   </a>
-  <a aria-label="Build status" href="https://travis-ci.com/dash-ui/compound">
-    <img alt="Build status" src="https://img.shields.io/travis/com/dash-ui/compound?style=for-the-badge&labelColor=24292e">
+  <a aria-label="Build status" href="https://github.com/dash-ui/compound/actions/workflows/release.yml">
+    <img alt="Build status" src="https://github.com/dash-ui/compound/actions/workflows/release.yml/badge.svg">
   </a>
   <a aria-label="NPM version" href="https://www.npmjs.com/package/@dash-ui/compound">
     <img alt="NPM Version" src="https://img.shields.io/npm/v/@dash-ui/compound?style=for-the-badge&labelColor=24292e">
