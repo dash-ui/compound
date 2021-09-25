@@ -73,8 +73,7 @@
   "release": {
     "branches": [
       "main",
-      "next",
-      "use-pnpm-and-github-actions"
+      "next"
     ]
   },
   "eslintConfig": {
