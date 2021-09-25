@@ -160,7 +160,7 @@
     "cross-env": "^7.0.3",
     "cz-conventional-changelog": "latest",
     "eslint": "latest",
-    "eslint-config-lunde": "latest",
+    "eslint-config-lunde": "^0.5.0",
     "husky": "4",
     "jest": "latest",
     "lint-staged": "latest",
