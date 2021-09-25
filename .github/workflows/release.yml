@@ -55,8 +55,8 @@ jobs:
   publish:
     name: 🚀 Publish
     # Don't run deployments for test-only commits/PRs
-    # if: "github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/next') && !startsWith(github.event.head_commit.message, 'test:') && !startsWith(github.event.pull_request.title, 'test:') && !startsWith(github.event.head_commit.message, 'test(') && !startsWith(github.event.pull_request.title, 'test(')"
-    if: "!startsWith(github.event.head_commit.message, 'test:') && !startsWith(github.event.pull_request.title, 'test:') && !startsWith(github.event.head_commit.message, 'test(') && !startsWith(github.event.pull_request.title, 'test(')"
+    if: "github.event_name == 'push' && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/next') && !startsWith(github.event.head_commit.message, 'test:') && !startsWith(github.event.pull_request.title, 'test:') && !startsWith(github.event.head_commit.message, 'test(') && !startsWith(github.event.pull_request.title, 'test(')"
+    # if: "!startsWith(github.event.head_commit.message, 'test:') && !startsWith(github.event.pull_request.title, 'test:') && !startsWith(github.event.head_commit.message, 'test(') && !startsWith(github.event.pull_request.title, 'test(')"
     runs-on: ubuntu-latest
     needs: install-and-verify
     strategy:
