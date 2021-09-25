@@ -70,6 +70,13 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
+  "release": {
+    "branches": [
+      "main",
+      "next",
+      "use-pnpm-and-github-actions"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "lunde"
