@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="3" failures="0" errors="0" time="0.968">
+  <testsuite name="`compound` — _src/index.test.ts_" errors="0" failures="0" skipped="0" timestamp="2021-09-25T03:47:06" time="0.262" tests="3">
+    <testcase classname="compound should create a compound style" name="compound should create a compound style" time="0.011" file="src/index.test.ts">
+    </testcase>
+    <testcase classname="compound should create an atomic compound style" name="compound should create an atomic compound style" time="0.005" file="src/index.test.ts">
+    </testcase>
+    <testcase classname="compound should create an atomic compound style ad hoc" name="compound should create an atomic compound style ad hoc" time="0.004" file="src/index.test.ts">
+    </testcase>
+  </testsuite>
+</testsuites>
