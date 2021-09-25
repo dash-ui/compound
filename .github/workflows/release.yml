@@ -82,17 +82,9 @@ jobs:
       - name: Build
         run: pnpm build
       - name: Stage changes
-        run: git add . && npx standard-version -a
-      - name: Commit test results
-        if: ${{ github.event_name == 'push' }}
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          file_pattern: CHANGELOG.md package.json types
-          commit_message: 'chore(release): bump version'
-      - name: Publish
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          dry-run: true
-          check-version: true
-          tag: ${{ github.ref == 'refs/heads/main' && 'latest' || 'next' }}
+        run: git add .
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: pnpx semantic-release --dry-run
