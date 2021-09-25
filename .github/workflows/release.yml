@@ -61,6 +61,13 @@ jobs:
           list-tests: 'all'
           max-annotations: '50'
           fail-on-error: 'true'
+      - name: Publish tests to Codecov
+        if: always()
+        uses: codecov/codecov-action@v2
+        with:
+          files: .test-results/junit.xml
+          fail_ci_if_error: false
+          verbose: true
 
   publish:
     name: 🚀 Publish
