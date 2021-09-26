@@ -1,6 +1,6 @@
 <hr/>
   <br/>
-  <img src='https://github.com/dash-ui/styles/raw/master/assets/logo.png'/>
+  <img src='https://github.com/dash-ui/styles/raw/main/assets/logo.png'/>
   <blockquote>A utility for creating compound styles with Dash</blockquote>
   
   <pre>npm i @dash-ui/compound</pre>
