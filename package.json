@@ -45,15 +45,9 @@
     "test": "jest",
     "validate": "lundle check-types && npm run lint && jest --coverage"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
-  },
   "lint-staged": {
     "**/*.{ts,js}": [
-      "eslint --fix",
+      "eslint --ext .ts,.js --fix",
       "prettier --write"
     ],
     "**/*.{md,yml,json}": [
