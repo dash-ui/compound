@@ -1,3 +1,10 @@
+## [0.1.4](https://github.com/dash-ui/compound/compare/v0.1.3...v0.1.4) (2021-09-27)
+
+
+### Bug Fixes
+
+* fix fake thing ([871c75a](https://github.com/dash-ui/compound/commit/871c75ab1888d35a9137ec9829d3744b36fbc2ff))
+
 # Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
