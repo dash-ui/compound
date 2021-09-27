@@ -77,32 +77,31 @@ function compound<Tokens extends DashTokens, ThemeNames extends string>(
       return "".concat(...atomicCss(compoundMap));
     }
 
-    return Object.assign(
-      function compoundStyle(
-        compoundMap: {
-          [Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0];
-        } = {},
-        compoundOptions: CompoundStylesOptions = emptyObj
-      ) {
-        if (compoundOptions.atomic ?? options.atomic) {
-          const css = atomicCss(compoundMap);
-          let classes = "";
+    function compoundStyle(
+      compoundMap: {
+        [Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0];
+      } = {},
+      compoundOptions: CompoundStylesOptions = emptyObj
+    ) {
+      if (compoundOptions.atomic ?? options.atomic) {
+        const css = atomicCss(compoundMap);
+        let classes = "";
 
-          for (let i = 0; i < css.length; i++) {
-            classes += styles.cls(css[i]) + (i === css.length - 1 ? "" : " ");
-          }
-
-          return classes;
+        for (let i = 0; i < css.length; i++) {
+          classes += styles.cls(css[i]) + (i === css.length - 1 ? "" : " ");
         }
 
-        return styles.cls(css(compoundMap));
-      },
-      {
-        css,
-        atomicCss,
-        styles: styleMap,
+        return classes;
       }
-    );
+
+      return styles.cls(css(compoundMap));
+    }
+
+    return Object.assign(compoundStyle, {
+      css,
+      atomicCss,
+      styles: styleMap,
+    });
   };
 }
 
