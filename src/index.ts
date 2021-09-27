@@ -3,14 +3,14 @@ import type {
   ResponsiveOne,
   ResponsiveStyle,
   ResponsiveStyles,
-} from '@dash-ui/responsive'
+} from "@dash-ui/responsive";
 import type {
   DashTokens,
   Style,
   Styles,
   StylesLazy,
   StylesOne,
-} from '@dash-ui/styles'
+} from "@dash-ui/styles";
 
 /**
  * A factory function that creates a compound styles utility
@@ -37,88 +37,79 @@ function compound<Tokens extends DashTokens, ThemeNames extends string>(
       | StylesLazy<any>
       | ResponsiveLazy<any, any>
     >,
-    StyleMap extends {[Name in keyof T]: T[Name]}
+    StyleMap extends { [Name in keyof T]: T[Name] }
   >(styleMap: StyleMap, options: CompoundStylesOptions = emptyObj) {
-    const cache = new Map<string, string[]>()
-    const mapKeys: string[] = []
-    mapKeys.push(...Object.keys(styleMap))
+    const cache = new Map<string, string[]>();
+    const mapKeys: string[] = [];
+    mapKeys.push(...Object.keys(styleMap));
 
     function atomicCss(compoundMap: {
-      [Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0]
+      [Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0];
     }): string[] {
-      const key = JSON.stringify(compoundMap)
-      const cached = cache.get(key)
-      if (cached) return cached
+      const key = JSON.stringify(compoundMap);
+      const cached = cache.get(key);
+      if (cached) return cached;
 
       const output: string[] =
         // @ts-expect-error
-        typeof styleMap.default === 'function'
+        typeof styleMap.default === "function"
           ? [
               // @ts-expect-error
               styleMap.default.css(),
             ]
-          : []
+          : [];
 
       for (let i = 0; i < mapKeys.length; i++) {
-        const key = mapKeys[i]
-        if (key === 'default') continue
-        const value = (compoundMap as any)[key]
-        if (value === void 0 || value === null) continue
-        output.push((styleMap as any)[key]?.css(value))
+        const key = mapKeys[i];
+        if (key === "default") continue;
+        const value = (compoundMap as any)[key];
+        if (value === void 0 || value === null) continue;
+        output.push((styleMap as any)[key]?.css(value));
       }
 
-      cache.set(key, output)
-      return output
+      cache.set(key, output);
+      return output;
     }
 
     function css(compoundMap: {
-      [Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0]
+      [Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0];
     }): string {
-      const css = atomicCss(compoundMap)
-      let output = ''
-      let i = 0
-      const length = css.length
-
-      for (; i < length; i++) {
-        output += css[i]
-      }
-
-      return output
+      return "".concat(...atomicCss(compoundMap));
     }
 
     return Object.assign(
       function compoundStyle(
         compoundMap: {
-          [Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0]
+          [Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0];
         } = {},
         compoundOptions: CompoundStylesOptions = emptyObj
       ) {
         if (compoundOptions.atomic ?? options.atomic) {
-          const css = atomicCss(compoundMap)
-          let classes = ''
+          const css = atomicCss(compoundMap);
+          let classes = "";
 
           for (let i = 0; i < css.length; i++) {
-            classes += styles.cls(css[i]) + (i === css.length - 1 ? '' : ' ')
+            classes += styles.cls(css[i]) + (i === css.length - 1 ? "" : " ");
           }
 
-          return classes
+          return classes;
         }
 
-        return styles.cls(css(compoundMap))
+        return styles.cls(css(compoundMap));
       },
       {
         css,
         atomicCss,
         styles: styleMap,
       }
-    )
-  }
+    );
+  };
 }
 
-const emptyObj = {}
+const emptyObj = {};
 
 export type CompoundStylesOptions = {
-  atomic?: boolean
-}
+  atomic?: boolean;
+};
 
-export default compound
+export default compound;

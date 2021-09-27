@@ -141,11 +141,6 @@
       "__DEV__": true
     }
   },
-  "prettier": {
-    "semi": false,
-    "singleQuote": true,
-    "bracketSpacing": false
-  },
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",

@@ -32,7 +32,7 @@
 ## Quick start
 
 ```js
-import compound from '@dash-ui/compound'
+import compound from "@dash-ui/compound";
 ```
 
 ## API

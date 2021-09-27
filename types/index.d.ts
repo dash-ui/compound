@@ -3,14 +3,14 @@ import type {
   ResponsiveOne,
   ResponsiveStyle,
   ResponsiveStyles,
-} from '@dash-ui/responsive'
+} from "@dash-ui/responsive";
 import type {
   Style,
   Styles,
   StylesLazy,
   StylesOne,
   DashTokens,
-} from '@dash-ui/styles'
+} from "@dash-ui/styles";
 /**
  * A factory function that creates a compound styles utility
  */
@@ -27,29 +27,25 @@ declare function compound<Tokens extends DashTokens, ThemeNames extends string>(
     | StylesLazy<any>
     | ResponsiveLazy<any, any>
   >,
-  StyleMap extends {[Name in keyof T]: T[Name]}
+  StyleMap extends { [Name in keyof T]: T[Name] }
 >(
   styleMap: StyleMap,
   options?: CompoundStylesOptions
 ) => ((
   compoundMap?: {
-    [Name_1 in keyof StyleMap]?: Parameters<StyleMap[Name_1]>[0] | undefined
+    [Name_1 in keyof StyleMap]?: Parameters<StyleMap[Name_1]>[0] | undefined;
   },
   compoundOptions?: CompoundStylesOptions
 ) => string) & {
-  css: (
-    compoundMap: {
-      [Name_2 in keyof StyleMap]?: Parameters<StyleMap[Name_2]>[0] | undefined
-    }
-  ) => string
-  atomicCss: (
-    compoundMap: {
-      [Name_3 in keyof StyleMap]?: Parameters<StyleMap[Name_3]>[0] | undefined
-    }
-  ) => string[]
-  styles: StyleMap
-}
+  css: (compoundMap: {
+    [Name_2 in keyof StyleMap]?: Parameters<StyleMap[Name_2]>[0] | undefined;
+  }) => string;
+  atomicCss: (compoundMap: {
+    [Name_3 in keyof StyleMap]?: Parameters<StyleMap[Name_3]>[0] | undefined;
+  }) => string[];
+  styles: StyleMap;
+};
 export declare type CompoundStylesOptions = {
-  atomic?: boolean
-}
-export default compound
+  atomic?: boolean;
+};
+export default compound;
