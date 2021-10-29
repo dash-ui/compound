@@ -5,6 +5,7 @@ import type {
   ResponsiveStyles,
 } from "@dash-ui/responsive";
 import type {
+  DashThemes,
   DashTokens,
   Style,
   Styles,
@@ -17,8 +18,8 @@ import type {
  *
  * @param styles
  */
-function compound<Tokens extends DashTokens, ThemeNames extends string>(
-  styles: Styles<Tokens, ThemeNames> | ResponsiveStyles<Tokens, any, ThemeNames>
+function compound<Tokens extends DashTokens, Themes extends DashThemes>(
+  styles: Styles<Tokens, Themes> | ResponsiveStyles<Tokens, Themes, any>
 ) {
   /**
    * A function for creating compound/multi-variant styles
@@ -30,7 +31,7 @@ function compound<Tokens extends DashTokens, ThemeNames extends string>(
     Keys extends string,
     T extends Record<
       Keys,
-      | ResponsiveStyle<any, any, any>
+      | ResponsiveStyle<any, any, any, any>
       | Style<any>
       | StylesOne
       | ResponsiveOne<any>
