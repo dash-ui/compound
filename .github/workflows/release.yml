@@ -5,10 +5,12 @@ on:
     branches:
       - main
       - next
+      - alpha
   pull_request:
     branches:
       - main
       - next
+      - alpha
 
 jobs:
   release:
