@@ -1,3 +1,20 @@
+# [1.0.0-alpha.1](https://github.com/dash-ui/compound/compare/v0.1.4...v1.0.0-alpha.1) (2021-10-29)
+
+
+### Bug Fixes
+
+* fix workflow to include alpha branch ([d72d32c](https://github.com/dash-ui/compound/commit/d72d32ca1158d72d2ea224b1b0a1f3266d6e3e39))
+
+
+### Features
+
+* update types to support latest dash alpha ([5dbdbc8](https://github.com/dash-ui/compound/commit/5dbdbc8a200fb75e896c20d5c855dfeee4ff2213))
+
+
+### BREAKING CHANGES
+
+* Updates type definitions to support latest Dash alpha
+
 ## [0.1.4](https://github.com/dash-ui/compound/compare/v0.1.3...v0.1.4) (2021-09-27)
 
 
