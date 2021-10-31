@@ -147,8 +147,8 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
-    "@dash-ui/responsive": "^1.0.0-alpha.1",
-    "@dash-ui/styles": "^1.0.0-alpha.1",
+    "@dash-ui/responsive": "^1.0.0-alpha.4",
+    "@dash-ui/styles": "^1.0.0-alpha.6",
     "@semantic-release/changelog": "^6.0.0",
     "@semantic-release/git": "^10.0.0",
     "@swc-node/core": "^1.6.0",
@@ -167,7 +167,7 @@
     "typescript": "latest"
   },
   "peerDependencies": {
-    "@dash-ui/responsive": ">=1.0.0-alpha.1",
-    "@dash-ui/styles": ">=1.0.0-alpha.1"
+    "@dash-ui/responsive": ">=1.0.0-alpha.4",
+    "@dash-ui/styles": ">=1.0.0-alpha.6"
   }
 }
