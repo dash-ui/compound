@@ -1,3 +1,10 @@
+# [1.0.0-alpha.2](https://github.com/dash-ui/compound/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2021-10-31)
+
+
+### Bug Fixes
+
+* update peer deps ([cf9ffab](https://github.com/dash-ui/compound/commit/cf9ffabf5502395b6994feb242571b1948c1f7f1))
+
 # [1.0.0-alpha.1](https://github.com/dash-ui/compound/compare/v0.1.4...v1.0.0-alpha.1) (2021-10-29)
 
 
