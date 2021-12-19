@@ -40,15 +40,14 @@ function compound<Tokens extends DashTokens, Themes extends DashThemes>(
     >,
     StyleMap extends { [Name in keyof T]: T[Name] }
   >(styleMap: StyleMap, options: CompoundStylesOptions = emptyObj) {
-    const cache = new Map<string, string[]>();
-    const mapKeys: string[] = [];
-    mapKeys.push(...Object.keys(styleMap));
+    const cache: Record<string, string[]> = {};
+    const mapKeys: string[] = Object.keys(styleMap);
 
     function atomicCss(compoundMap: {
       [Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0];
     }): string[] {
       const key = JSON.stringify(compoundMap);
-      const cached = cache.get(key);
+      const cached = cache[key];
       if (cached) return cached;
 
       const output: string[] =
@@ -68,8 +67,7 @@ function compound<Tokens extends DashTokens, Themes extends DashThemes>(
         output.push((styleMap as any)[key]?.css(value));
       }
 
-      cache.set(key, output);
-      return output;
+      return (cache[key] = output);
     }
 
     function css(compoundMap: {
