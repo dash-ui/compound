@@ -1,3 +1,10 @@
+# [1.0.0-alpha.3](https://github.com/dash-ui/compound/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2021-12-19)
+
+
+### Performance Improvements
+
+* use object instead of map for cache ([31b3bf6](https://github.com/dash-ui/compound/commit/31b3bf603e5482a76d5f1fa3954b42a3f3053110))
+
 # [1.0.0-alpha.2](https://github.com/dash-ui/compound/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2021-10-31)
 
 
