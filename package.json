@@ -47,7 +47,7 @@
   },
   "lint-staged": {
     "package.json": [
-      "pnpx -y prettier-package-json --write"
+      "pnpm dlx prettier-package-json --write"
     ],
     "**/*.{ts,js}": [
       "eslint --ext .ts,.js --fix",
@@ -147,8 +147,8 @@
   "devDependencies": {
     "@commitlint/cli": "latest",
     "@commitlint/config-conventional": "latest",
-    "@dash-ui/responsive": "^1.0.0-alpha.4",
-    "@dash-ui/styles": "^1.0.0-alpha.6",
+    "@dash-ui/responsive": "^1.0.0",
+    "@dash-ui/styles": "^1.0.1",
     "@semantic-release/changelog": "^6.0.0",
     "@semantic-release/git": "^10.0.0",
     "@swc-node/core": "^1.6.0",
@@ -160,14 +160,14 @@
     "eslint": "^7.32.0",
     "eslint-config-lunde": "^0.5.0",
     "husky": "4",
-    "jest": "latest",
+    "jest": "27",
     "lint-staged": "latest",
     "lundle": "latest",
     "prettier": "latest",
     "typescript": "latest"
   },
   "peerDependencies": {
-    "@dash-ui/responsive": ">=1.0.0-alpha.4",
-    "@dash-ui/styles": ">=1.0.0-alpha.6"
+    "@dash-ui/responsive": ">=1.0.0",
+    "@dash-ui/styles": ">=1.0.1"
   }
 }
