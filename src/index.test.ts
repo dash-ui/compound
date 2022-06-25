@@ -14,7 +14,7 @@ describe("compound", () => {
       default: styles.one({
         backgroundColor: "white",
       }),
-      color: styles({
+      color: styles.variants({
         red: { color: "red" },
       }),
       size: styles.lazy((fontSize: string) => ({
@@ -49,7 +49,7 @@ describe("compound", () => {
         default: styles.one({
           backgroundColor: "white",
         }),
-        color: styles({
+        color: styles.variants({
           red: { color: "red" },
         }),
         size: styles.lazy((fontSize: string) => ({
@@ -104,7 +104,7 @@ describe("compound", () => {
       default: styles.one({
         backgroundColor: "white",
       }),
-      color: styles({
+      color: styles.variants({
         red: { color: "red" },
       }),
       size: styles.lazy((fontSize: string) => ({

@@ -1,3 +1,34 @@
+# [1.0.0-alpha.3](https://github.com/dash-ui/compound/compare/v1.0.0-alpha.2...v1.0.0-alpha.3) (2021-12-19)
+
+
+### Performance Improvements
+
+* use object instead of map for cache ([31b3bf6](https://github.com/dash-ui/compound/commit/31b3bf603e5482a76d5f1fa3954b42a3f3053110))
+
+# [1.0.0-alpha.2](https://github.com/dash-ui/compound/compare/v1.0.0-alpha.1...v1.0.0-alpha.2) (2021-10-31)
+
+
+### Bug Fixes
+
+* update peer deps ([cf9ffab](https://github.com/dash-ui/compound/commit/cf9ffabf5502395b6994feb242571b1948c1f7f1))
+
+# [1.0.0-alpha.1](https://github.com/dash-ui/compound/compare/v0.1.4...v1.0.0-alpha.1) (2021-10-29)
+
+
+### Bug Fixes
+
+* fix workflow to include alpha branch ([d72d32c](https://github.com/dash-ui/compound/commit/d72d32ca1158d72d2ea224b1b0a1f3266d6e3e39))
+
+
+### Features
+
+* update types to support latest dash alpha ([5dbdbc8](https://github.com/dash-ui/compound/commit/5dbdbc8a200fb75e896c20d5c855dfeee4ff2213))
+
+
+### BREAKING CHANGES
+
+* Updates type definitions to support latest Dash alpha
+
 ## [0.1.4](https://github.com/dash-ui/compound/compare/v0.1.3...v0.1.4) (2021-09-27)
 
 
