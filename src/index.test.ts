@@ -23,8 +23,6 @@ describe("compound", () => {
       })),
     });
 
-    text({ size: "14px", color: "red" });
-
     expect(text.css({ color: "red", size: "1rem" })).toBe(
       "background-color:white;color:red;font-size:1rem;"
     );
