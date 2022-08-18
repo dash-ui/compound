@@ -39,7 +39,10 @@ function compound<Tokens extends DashTokens, Themes extends DashThemes>(
       | ResponsiveLazy<any, any>
     >,
     StyleMap extends { [Name in keyof T]: T[Name] }
-  >(styleMap: StyleMap, options: CompoundStylesOptions = emptyObj) {
+  >(
+    styleMap: StyleMap,
+    options: CompoundStylesOptions = emptyObj
+  ): CompoundStyle<Keys, T, StyleMap> {
     const cache: Record<string, string[]> = {};
     const mapKeys: string[] = Object.keys(styleMap);
 
@@ -81,7 +84,7 @@ function compound<Tokens extends DashTokens, Themes extends DashThemes>(
         [Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0];
       } = {},
       compoundOptions: CompoundStylesOptions = emptyObj
-    ) {
+    ): string {
       if (compoundOptions.atomic ?? options.atomic) {
         const css = atomicCss(compoundMap);
         let classes = "";
@@ -105,6 +108,37 @@ function compound<Tokens extends DashTokens, Themes extends DashThemes>(
 }
 
 const emptyObj = {};
+
+export type CompoundStyle<
+  Keys extends string,
+  T extends Record<
+    Keys,
+    | ResponsiveStyle<any, any, any, any>
+    | Style<any>
+    | StylesOne
+    | ResponsiveOne<any>
+    | StylesLazy<any>
+    | ResponsiveLazy<any, any>
+  >,
+  StyleMap extends { [Name in keyof T]: T[Name] }
+> = {
+  (
+    compoundMap?: {
+      [Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0] | undefined;
+    },
+    compoundOptions?: CompoundStylesOptions
+  ): string;
+
+  atomicCss(compoundMap: {
+    [Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0];
+  }): string[];
+
+  css(compoundMap: {
+    [Name in keyof StyleMap]?: Parameters<StyleMap[Name]>[0];
+  }): string;
+
+  styles: StyleMap;
+};
 
 export type CompoundStylesOptions = {
   atomic?: boolean;

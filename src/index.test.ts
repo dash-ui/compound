@@ -10,6 +10,7 @@ describe("compound", () => {
 
   it("should create a compound style", () => {
     const compoundStyles = compound(styles);
+
     const text = compoundStyles({
       default: styles.one({
         backgroundColor: "white",
